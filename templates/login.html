@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center align-items-center" style="min-height: 80vh; ">
+  <div class="col-md-4">
+    <h2 class="text-center mb-4" style="color: #092646;">Advokat</h2>
+
+    <form method="POST" action="{{ url_for('login') }}">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="username" name="username" required />
+        <label for="username" class="form-label">Username</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="password" name="password" required />
+        <label for="password" class="form-label">Password</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" style="background-color: #092646; border-color: #092646;">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center mb-4" style="color: #092646">Tim Advokat LBH UTY</h1>
+
+<div class="container my-5">
+  <div class="row align-items-center bg-white shadow-lg rounded p-4 mb-4">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='kaiden.jpg') }}" width="150" height="150" class="rounded-circle img-fluid" alt="Profile Picture" />
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">Keisya Auffa</h3>
+      <p class="text-muted">Spesialisasi: Hukum Pidana</p>
+      <p class="text-muted">
+        Permasalahan yang berkaitan dengan hubungan anggota masyarakat dan negara; aktivitas sehari-hari yang diatur batasannya oleh hukum baik dari pencurian hingga korupsi. Seperti: pencurian, pelecehan, penghinaan, penggelapan,
+        pembunuhan, KDRT, narkoba, penipuan dan lainnya.
+      </p>
+    </div>
+  </div>
+
+  <div class="row align-items-center bg-white shadow-lg rounded p-4 mb-4">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='ponyo.jpg') }}" width="150" height="150" class="rounded-circle img-fluid" alt="Profile Picture" />
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">Keisha Salsabila</h3>
+      <p class="text-muted">Spesialisasi: Hukum Perdata</p>
+      <p class="text-muted">Permasalahan yang berkaitan dengan hubungan antar individu. Seperti: Utang Piutang, Jual-Beli, Sewa-Menyewa, Perjanjian, Cicilan, Pencemaran Nama Baik, Gagal Bayar, Sengketa Hak Milik dan lainnya.</p>
+    </div>
+  </div>
+
+  <div class="row align-items-center bg-white shadow-lg rounded p-4 mb-4">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='bch.jpeg') }}" width="150" height="150" class="rounded-circle img-fluid" alt="Profile Picture" />
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">Naswa Wanda</h3>
+      <p class="text-muted">Spesialisasi: Perkawinan & Perceraian</p>
+      <p class="text-muted">Permasalahan berkaitan dengan perkawinan dan perceraian. Seperti: dokumen yang perlu dipersiapkan, perjanjian pra-nikah, waris, hak asuh anak, pembagian harta, pengajuan cerai dan lainnya.</p>
+    </div>
+  </div>
+
+  <div class="row align-items-center bg-white shadow-lg rounded p-4 mb-4">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='ijo.jpeg') }}" width="150" height="150" class="rounded-circle img-fluid" alt="Profile Picture" />
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">Queen Qiblatul</h3>
+      <p class="text-muted">Spesialisasi: Ketenagakerjaan</p>
+      <p class="text-muted">Permasalahan hubungan antara pengusaha dan pekerja. Seperti: PHK, kontrak kerja, upah tidak dibayarkan atau tidak sesuai standar, hak buruh, mogok kerja, dan lainnya.</p>
+    </div>
+  </div>
+
+  <div class="row align-items-center bg-white shadow-lg rounded p-4 mb-4">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='patrick.jpg') }}" width="150" height="150" class="rounded-circle img-fluid" alt="Profile Picture" />
+    </div>
+    <div class="col-md-8">
+      <h3 class="fw-bold">Syahrul Ramdani</h3>
+      <p class="text-muted">Spesialisasi: Pertanahan</p>
+      <p class="text-muted">Permasalahan tanah dan perumahan. Seperti: sengketa hak milik tanah, tanah girik, pendaftaran tanah, penggusuran, sertifikat tanah hilang dan lainnya.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

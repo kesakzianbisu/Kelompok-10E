@@ -1,0 +1,33 @@
+{% extends "baseadvokat.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4" style="color: #092646;">Kasus Saya</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID Kasus</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Email</th>
+        <th>Tanggal</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for kasus in data %}
+      <tr>
+        <td>
+          <a href="{{ url_for('detail_kasus', id_kasus=kasus[0]) }}">
+            {{ kasus[0] }}
+          </a>
+        </td>
+        <td>{{ kasus[1] }}</td>
+        <td>{{ kasus[5] }}</td>
+        <td>{{ kasus[7] }}</td>
+        <td>{{ kasus[9] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

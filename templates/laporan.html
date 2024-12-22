@@ -1,0 +1,42 @@
+{% extends "baseadvokat.html" %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4" style="color: #092646;">Laporan</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID Kasus</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+        <th>Email</th>
+        <th>Tanggal</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for kasus in data %}
+
+      <tr>
+        <td>
+          <a href="{{ url_for('detail_kasus', id_kasus=kasus[0]) }}"> {{ kasus[0] }} </a>
+        </td>
+        <td>{{ kasus[1] }}</td>
+        <td>{{ kasus[2] }}</td>
+        <td>{{ kasus[3] }}</td>
+        <td>{{ kasus[4] }}</td>
+        <td>{{ kasus[5] }}</td>
+        <td>
+            <form action="{{ url_for('update_status', id_kasus=kasus[0]) }}" method="POST">
+                <select name="status" onchange="this.form.submit()">
+                    <option value="Open" {% if kasus[5] == 'Open' %}selected{% endif %}>Open</option>
+                    <option value="Assigned" {% if kasus[5] == 'Assigned' %}selected{% endif %}>Assigned</option>
+                    <option value="Close" {% if kasus[5] == 'Close' %}selected{% endif %}>Close</option>
+                </select>
+            </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
